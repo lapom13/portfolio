@@ -4,3 +4,42 @@ mixin icon(iconName, iconClass)
 
 mixin image(imagePath, imageAlt, imageClass)
   img(src=`/assets/images/${imagePath}`, alt=`${imageAlt}`, class=`${imageClass}`)
+
+mixin socials(modClass)
+  -
+    var socials_array = [
+        ['vk', 'http://www.vk.com'],
+        ['gh', 'http://www.github.com'],
+        ['in', 'http://www.linkedin.com']
+    ]
+  ul.socials(class=`${modClass}`)
+    each item in socials_array
+      li.socials__item
+        a(href=item[1]).socials__link
+          +icon(item[0], 'socials__link-icon')
+
+
+mixin menu(menuItems, modClass)
+    .menu(class=modClass)
+      ul.menu__list
+        each item in menuItems
+          li.menu__item
+            a.menu__link(href=item[1])= item[0]
+
+
+mixin radioInput(text)
+  label.radio
+    input(type="radio" name="radio")
+    div.radio-fake
+    span= text
+  
+
+mixin checkboxInput(text)
+  label.checkbox
+    input(type="checkbox" checked='checked')
+    div.checkbox-fake
+    span= text
+  
+
+
+
