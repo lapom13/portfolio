@@ -15,7 +15,7 @@ mixin socials(modClass)
   ul.socials(class=`${modClass}`)
     each item in socials_array
       li.socials__item
-        a(href=item[1]).socials__link
+        a(href=`${item[1]}`).socials__link
           +icon(item[0], 'socials__link-icon')
 
 
@@ -39,6 +39,15 @@ mixin checkboxInput(text)
     input(type="checkbox" checked='checked')
     div.checkbox-fake
     span= text
+
+mixin heroUser()
+  .user(class=modClass)
+    .user__img.avatar
+      .user__img-pic
+    .user__description
+      .user__name Владимир Астахов
+      .user__info Личный сайт разработчика
+
   
 
 
