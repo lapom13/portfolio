@@ -1,0 +1,39 @@
+extends ../main.layout.pug
+
+block variables
+  - var title = 'Мои работы'
+
+block scripts
+  script(src='works.bundle.js')
+
+block content
+  section.hero.hero-works
+  
+  section.my-works
+    .title.dashTitle мои работы
+    .description
+        .description__title.subtitle
+        .description__text
+        a.btn-link
+    .slider
+        .slider__top
+        .slider__bottom
+            .slider__bottom-left
+            .slider__bottom-right
+  
+  section.feedback
+    .title.dashTitle что обо мне говорят
+    .feedback__content
+        .feedback__text
+        .feedback__author
+            .feedback__author-avatar
+            .feedback__author-name
+    .feedback__form
+        .subtitle связаться со мной
+        input(tupe='text')
+        input(tupe='text')
+        textarea(name="", cols="30", rows="10")
+        button.btn-send Отправить
+        button.btn-clear Очистить
+
+  

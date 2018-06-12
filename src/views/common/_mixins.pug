@@ -19,12 +19,16 @@ mixin socials(modClass)
           +icon(item[0], 'socials__link-icon')
 
 
-mixin menu(menuItems, modClass)
+mixin menu(menuItems, modClass, indexIsActive)
     .menu(class=modClass)
       ul.menu__list
-        each item in menuItems
-          li.menu__item
-            a.menu__link(href=item[1])= item[0]
+        each item, index in menuItems
+          if index == indexIsActive
+            li.menu__item.is-active
+              a.menu__link(href=item[1])= item[0]
+          else
+            li.menu__item
+              a.menu__link(href=item[1])= item[0]
 
 
 mixin radioInput(text)
