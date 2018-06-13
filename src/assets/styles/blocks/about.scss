@@ -1,0 +1,56 @@
+.about {
+    display: flex;
+}
+
+.about__col {
+    width: 50%;
+}
+
+.about__left {
+ background-color: #efeee9;
+ display: flex;
+ padding: 20px;
+}
+
+.about__right {
+    background-color: #eeebdf;
+    padding: 20px;
+}
+
+.about__right-text {
+    margin-bottom: 60px;
+}
+
+.about__left-title, .user-description {
+    width: 50%;
+}
+
+.about__left-title, .about__right-title {
+    text-align: center;
+}
+
+.about__right-title {
+    .subtitle {
+        padding: 0;
+    }
+
+    margin-bottom: 30px;
+
+}
+
+.user-description__text {
+    line-height: 24px;
+
+    p {
+        margin-bottom: 10px;
+    }
+}
+
+
+.triangle_about_left {
+    fill: #efeee9;
+}
+
+.triangle_about_right {
+    fill: #eeebdf;
+}

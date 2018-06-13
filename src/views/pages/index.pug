@@ -1,6 +1,24 @@
 extends ../auth.layout.pug
 
 block content
-  .hello-world
-    +icon('check', 'hello-world__block')
-    .inlined-svg
+
+  .wrapper.wrapper-index
+    .auth-block
+      .auth-block__content
+        .auth-block__user
+          +heroUser('user-index')
+        .auth-block__socials
+          +socials('socials_fill_green')
+      
+      .auth-block__menu
+        -
+          var menuItems = [
+              ['Мои работы ', './works.html'],
+              ['Обо мне', './about.html'],
+              ['Блог', './blog.html']
+          ] 
+        +menu(menuItems, 'auth-block__menu-list')
+        
+
+  .catption-bottom © Владимир Астахов | создано с любовью в LoftSchool | 2016
+  a.auth-btn Авторизоваться
