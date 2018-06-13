@@ -17,25 +17,30 @@ block content
     a(href="#").hero__down-btn.down-btn
 
   section.about
+    .triangles
+      svg.triangle-left.triangle_fill_left(viewBox="0 0 100 100" preserveAspectRatio="none")
+        polygon.poligon(points="0,0 0,100 100,100")
+      svg.triangle-right.triangle_fill_right(viewBox="0 0 100 100" preserveAspectRatio="none")
+        polygon.poligon(points="0,0 0,100 100,100")
+         
     .about__col.about__left
-      .about__triangle.about__triangle-left
-        svg.triangle.triangle_fill_beige
-      .about__left-content
-        .title.dashTitle обо мне
+      .about__left-title
+        .title.dashTitle.transparent-caption-wrap обо мне
+          .transparent-caption-img(style="background-image: url('./assets/images/common/about_transparent_bg.png')")
       .user-description
         .user-description__img
           img(src='./assets/images/common/avatar_user.jpg').user-description__img-pic
         .user-description__data
           .user-description__title.subtitle.dashTitle кто я
           .user-description__text.text-content
-            p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-            p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
+            p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+            p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
     
     .about__col.about__right
-      .about__triangle.about__triangle-right
-        svg.triangle.triangle_fill_beige
-      .subtitle.dashTitle чем я могу быть вам полезен
-      .text-content Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+      .about__right-title
+        .subtitle.dashTitle чем я могу быть
+        .subtitle вам полезен
+      .about__right-text.text-content Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
       .about__right-content
         .skills
           -

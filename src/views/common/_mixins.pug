@@ -52,6 +52,12 @@ mixin heroUser()
       .user__name Владимир Астахов
       .user__info Личный сайт разработчика
 
+mixin triangles(side, color)
+  svg(style="display: block" height="200" width="100%" class = "triangles")
+    polygon.triangles_left( points="0,0 0,199 250,199" style=	
+    "fill:#408528;")
+    polygon.triangles_right(points="500,0 500,199 250,199" style=	
+    "fill:#0f2db3;")
   
 
 
