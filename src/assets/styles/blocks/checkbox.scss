@@ -1,0 +1,29 @@
+.form__checkbox-fake {
+    width: 16px;
+    height: 16px;
+    margin-right: rem(8px);
+    background-color: #fff;
+}
+
+.form__checkbox {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: rem(18px);
+
+    label {
+        display: flex;
+        align-items: center;
+    }
+
+    input {
+        position: absolute;
+        top: 0;
+        left: -10000px;
+
+        &:checked + .form__checkbox-fake{
+            background: url("../img/common/checkbox.png") center center / contain no-repeat;
+            background-color: #fff;
+        }
+    }
+}

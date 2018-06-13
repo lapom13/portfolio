@@ -1,0 +1,20 @@
+.triangles {
+    position: absolute;
+    width: 100%;
+    height: 160px;
+    transform: translateY(-100%);
+    display: flex;
+}
+
+.triangle-left, .triangle-right {
+    height: 100%;
+    width: 50%;
+    .poligon {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.triangle-right {
+    transform: scale(-1, 1);
+}

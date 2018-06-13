@@ -1,0 +1,45 @@
+.form__radio {
+    display: flex;
+    position: relative;
+    margin-right: rem(20px);
+    margin-bottom: rem(18px);
+    align-items: center;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    label {
+        display: flex;
+        align-items: center;
+    }
+
+    input {
+        position: absolute;
+        top: 0;
+        left: -10000px;
+
+        &:checked + .form__radio-fake::after{
+            width: 7px;
+            height: 7px;
+        }
+    }
+
+}
+
+.form__radio-fake {
+    display: flex;
+    //@include circle(15px, #fff);
+    align-items: center;
+    justify-content: center;
+    margin-right: rem(8px);
+}
+
+.form__radio-fake::after {
+    content: "";
+    display: block;
+    //@include circle(7px, $orange);
+    transition: 0.2s;
+    height: 0;
+    width: 0;
+}

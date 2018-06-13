@@ -1,0 +1,37 @@
+
+.auth-block {
+    border-radius: 5px;
+    background-color: rgba(252, 252, 252, 0.851);
+    opacity: 0.851;
+    width: 380px;
+    //height: 395px;
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-block__content {
+    width: 100%;
+    flex-grow: 1;
+}
+
+.socials {
+    display: flex;
+}
+
+.auth-block__menu-list {
+    .menu__list {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    .menu__link {
+        padding: 15px 30px;
+        text-decoration: none;
+        color: #fff;
+        background-color: $green_light;
+    }
+
+    .menu__link:hover {
+        background-color: $green_dark;
+    }
+}
