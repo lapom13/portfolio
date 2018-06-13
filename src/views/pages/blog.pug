@@ -10,7 +10,7 @@ block content
   section.hero.hero-blog
     include ../common/hero__top.pug   
     .hero__title
-      .user.hero-about__user
+      .user.hero-blog__user
         .user__img.avatar
           .user__img-pic
         .user__description
@@ -19,6 +19,11 @@ block content
           .user__text  Статьи, которые я написал
 
   section.content
+    .triangles
+      svg.triangle-left.triangle_blog_left(viewBox="0 0 100 100" preserveAspectRatio="none")
+        polygon.poligon(points="0,0 0,100 100,100")
+      svg.triangle-right.triangle_blog_right(viewBox="0 0 100 100" preserveAspectRatio="none")
+        polygon.poligon(points="0,0 0,100 100,100")
     nav.content-nav
       -
         var blogNavItems = [

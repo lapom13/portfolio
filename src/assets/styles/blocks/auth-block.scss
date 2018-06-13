@@ -7,11 +7,12 @@
     //height: 395px;
     display: flex;
     flex-direction: column;
+    padding-top: 40px;
+    overflow: hidden;
 }
 
 .auth-block__content {
     width: 100%;
-    flex-grow: 1;
 }
 
 .socials {
@@ -21,14 +22,24 @@
 .auth-block__menu-list {
     .menu__list {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
+    }
+
+    .menu__item {
+        flex: 1;
+        margin-right: 2px;
+        &:last-child {
+            margin-right: 0;
+        }
     }
     
     .menu__link {
+        display: block;
         padding: 15px 30px;
         text-decoration: none;
         color: #fff;
         background-color: $green_light;
+        white-space: nowrap;
     }
 
     .menu__link:hover {
