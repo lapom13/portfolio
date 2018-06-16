@@ -5,18 +5,13 @@ mixin icon(iconName, iconClass)
 mixin image(imagePath, imageAlt, imageClass)
   img(src=`/assets/images/${imagePath}`, alt=`${imageAlt}`, class=`${imageClass}`)
 
-mixin socials(modClass)
-  -
-    var socials_array = [
-        ['vk', 'http://www.vk.com'],
-        ['gh', 'http://www.github.com'],
-        ['in', 'http://www.linkedin.com']
-    ]
-  ul.socials(class=`${modClass}`)
-    each item in socials_array
-      li.socials__item
-        a(href=`${item[1]}`).socials__link
-          +icon(item[0], 'socials__link-icon')
+mixin socials(socialsItems, modClass)
+  .socials(class=`${modClass}`)
+    ul.socials__list
+      each item in socialsItems
+        li.socials__item
+          a(href=`${item[1]}` target="_blank").socials__link
+            +icon(item[0], 'socials__link-icon')
 
 
 mixin menu(menuItems, modClass, indexIsActive)
@@ -24,7 +19,7 @@ mixin menu(menuItems, modClass, indexIsActive)
       ul.menu__list
         each item, index in menuItems
           if index == indexIsActive
-            li.menu__item.is-active
+            li.menu__item.menu__item--is-active
               a.menu__link(href=item[1])= item[0]
           else
             li.menu__item
@@ -44,13 +39,13 @@ mixin checkboxInput(text)
     div.checkbox-fake
     span= text
 
-mixin heroUser()
+mixin heroUser(modClass)
   .user(class=modClass)
     .user__img.avatar
       .user__img-pic
     .user__description
       .user__name Владимир Астахов
-      .user__info Личный сайт разработчика
+      .user__info Личный сайт веб разработчика
 
 mixin triangles(side, color)
   svg(style="display: block" height="200" width="100%" class = "triangles")

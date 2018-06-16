@@ -1,5 +1,6 @@
-.hero__top
-      .hero__links
-        .hero__socials
-          +socials('')
-      include hero__menu.pug 
+header
+  .hero__top
+        .hero__links
+          .hero__socials
+            +socials(socials_array, 'socials--hero')
+        include hero__menu.pug 

@@ -6,19 +6,14 @@ block content
     .auth-block
       .auth-block__content
         .auth-block__user
-          +heroUser('user-index')
-        .auth-block__socials
-          +socials('socials_fill_green')
+          +heroUser('user--index-page')
+        nav.auth-block__socials
+          +socials(socials_array, 'socials--index-page')
       
       .auth-block__menu
-        -
-          var menuItems = [
-              ['Мои работы ', './works.html'],
-              ['Обо мне', './about.html'],
-              ['Блог', './blog.html']
-          ] 
-        +menu(menuItems, 'auth-block__menu-list')
+        +menu(menuItems, '')
         
 
-  .catption-bottom © Владимир Астахов | создано с любовью в LoftSchool | 2016
-  a.auth-btn Авторизоваться
+  footer
+    small.catption-bottom © Владимир Астахов | создано с любовью в LoftSchool | 2016
+  button.auth-btn Авторизоваться

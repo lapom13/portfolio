@@ -1,0 +1,12 @@
+.socials--index-page {
+    margin-bottom: 45px;
+
+    .socials__link-icon {
+        fill: $green_light;
+        opacity: 0.5;
+        
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

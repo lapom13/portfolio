@@ -20,12 +20,15 @@
         margin-bottom: 0;
     }
 }
+    .contacts__link {
+        display: flex;
+    }
+    
+        .contacts__icon {
+            width: 25px;
+            height: 25px;
+        }
 
-.contacts__icon {
-    width: 25px;
-    height: 25px;
-}
-
-.contacts__name {
-    font-style: normal;
-}
+        .contacts__name {
+            font-style: normal;
+        }
