@@ -9,7 +9,10 @@ authBtn.addEventListener ('click', function (event) {
 });
 
 wrapper.addEventListener ('click', function (event) {
-    flipper.style.transform = "rotateY(0deg)";
-    authBtn.style.display = "";
+    let target = event.target;
+    if (target == wrapper) {
+        flipper.style.transform = "rotateY(0deg)";
+        authBtn.style.display = "";
+    }
 });
 
