@@ -1,0 +1,47 @@
+.form {
+    position: relative;
+    width: 380px;
+    border-radius: 5px;
+    margin-bottom: 200px;
+    overflow: hidden;
+    //background-blend-mode: overlay;
+    // &::before {
+    //     position: absolute;
+    //     top: 0;
+    //     right: 0;
+    //     bottom: 0;
+    //     left: 0;
+    //     filter: blur(3px);
+    //     background-blend-mode: 
+    // }
+}
+
+.form__inputs {
+    padding: 0 20px;
+}
+
+.input, .textarea {
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 100%;
+    border: none;
+    padding: 20px 15px;
+}
+
+.btn-send, .btn-clear {
+    color: #fff;
+   width: 50%;
+   text-align: center;
+   padding: 15px;
+   background-color: $green_light; 
+}
+
+.btn-send {
+    opacity: .85;
+}
+
+.btn-clear {
+    opacity: .3;
+}
+
+

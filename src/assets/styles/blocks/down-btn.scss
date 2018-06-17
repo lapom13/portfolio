@@ -1,18 +1,11 @@
 .down-btn {
-    display: block;
     position: absolute;
     bottom: 70px;
     left: 50%;
     transform: translateX(-50%);
-    opacity: 0.5;
     
-    &:hover {
-        opacity: 1;
-    }
-}
-
-    .down-btn-icon {
+    svg {
         width: 26px;
         height: 16px;
-        fill: white;
     }
+}

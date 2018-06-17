@@ -53,7 +53,12 @@ mixin triangles(side, color)
     "fill:#408528;")
     polygon.triangles_right(points="500,0 500,199 250,199" style=	
     "fill:#0f2db3;")
-  
 
+mixin avatar(url, modClass)
+  .avatar(style=`background: url(${url});` class=`${modClass}`)
+
+mixin arrow(modClass)
+  a(href="#" class=modClass).arrow
+      +icon("arrow_down")
 
 

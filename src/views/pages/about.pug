@@ -12,10 +12,8 @@ block content
     include ../common/hero__top.pug  
     .hero__title
       +heroUser('hero-about__user')
-        
+    +arrow("down-btn")
 
-    a(href="#").hero__down-btn.down-btn
-      +icon("arrow_down", "down-btn-icon")
 
   main.maincontent
     section.about
@@ -27,7 +25,7 @@ block content
           
       .about__col.about__left
         .about__left-title
-          h1.title.dashTitle.transparent-caption-wrap обо мне
+          h1.title.dashTitle обо мне
             .transparent-caption-img(style="background-image: url('./assets/images/common/about_transparent_bg.png')")
         .user-description
           .user-description__img
@@ -72,18 +70,11 @@ block content
         h2.contacts__title.subtitle.dashTitle Контакты
         address.contacts__data
           ul.contacts__list
-            -
-              var contacts = [
-                ['skype', 'skype_kdn'],
-                ['mail', 'astahov@gmail.com'],
-                ['phone', '+7 931 2009324'],
-                ['mapmark', 'г.Новосибирск, ул. Инская, д. 5']
-              ]
             each item in contacts
               li.contacts__item
-                a.contacts__link
+                a.contacts__link(href=`${item[1]}` target="_blank")
                   .contacts__icon
-                    +icon(`../${item[0]}`, 'contacts__icon-pic')
+                    +icon(item[0], 'contacts__icon-pic')
                   .contacts__name #{item[1]}
 
   

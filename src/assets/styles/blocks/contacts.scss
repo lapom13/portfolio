@@ -22,13 +22,20 @@
 }
     .contacts__link {
         display: flex;
+        text-decoration: none;
+        color: $grey_light;
     }
     
-        .contacts__icon {
-            width: 25px;
-            height: 25px;
-        }
-
         .contacts__name {
             font-style: normal;
         }
+        
+        .contacts__icon{
+            margin-right: 10px;
+        }
+            
+            .contacts__icon-pic {
+                width: 25px;
+                height: 25px;
+                fill: $green_light;
+            }

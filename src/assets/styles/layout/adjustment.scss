@@ -29,14 +29,15 @@
 }
 
 .title {
-    @include bernier(title);
+    position: relative;
     display: inline-block; 
+    @include bernier(title);
 }
 
 .subtitle {
+    position: relative;
     @include bernier(subtitle); 
 }
-
 
 .transparent-caption-img {
     position: absolute;
@@ -53,6 +54,11 @@
     transform: scale(1.3, 1.3);
 }
 
-.transparent-caption-wrap {
-    position: relative;
+.avatar {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
 }

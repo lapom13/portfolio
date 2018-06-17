@@ -1,4 +1,6 @@
 .hero {
+    position: relative;
+    background: url('./assets/images/common/bg_header.jpg') center center / cover no-repeat;
     min-height: 100vh;
     display: flex;
     flex-direction: column;

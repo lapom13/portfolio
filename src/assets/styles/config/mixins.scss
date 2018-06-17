@@ -6,6 +6,12 @@
 //     @return $px/16px + 0rem;
 // }
 
+@mixin centerFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @mixin tablets {
     @media screen and (max-width: $tablets) {
         @content;

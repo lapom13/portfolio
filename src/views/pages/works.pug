@@ -8,32 +8,72 @@ block scripts
 
 block content
   section.hero.hero-works
-  
+    include ../common/hero__top.pug  
+    .hero__title
+      +heroUser('hero-about__user')
+    +arrow("down-btn")
+      
   section.my-works
-    .title.dashTitle мои работы
-    .description
-        .description__title.subtitle
-        .description__text
+    .triangles
+        svg.triangle-left.triangle_works_left(viewBox="0 0 100 100" preserveAspectRatio="none")
+          polygon.poligon(points="0,0 0,100 100,100")
+        svg.triangle-right.triangle_works_right(viewBox="0 0 100 100" preserveAspectRatio="none")
+          polygon.poligon(points="0,0 0,100 100,100")
+    .my-works__title
+      h1.title.dashTitle мои работы
+        .transparent-caption-img(style="background-image: url('./assets/images/works/works_transparent_bg.png');")
+    .my-works__description
+        .my-works__title
+          .subtitle
+            .dashTitle Сайт школы онлайн
+            | Образования
+        .my-works__text HTML , CSS, JAVASCRIPT
         a.btn-link
-    .slider
+          +icon("link", "btn-link__icon")
+          .btn-link__caption Посмотреть сайт
+    .slider.my-works__slider
         .slider__top
         .slider__bottom
             .slider__bottom-left
             .slider__bottom-right
   
   section.feedback
-    .title.dashTitle что обо мне говорят
-    .feedback__content
+    h1.title.title--feedback
+      .dashTitle что обо мне
+      | говорят
+      .transparent-caption-img(style="background-image: url('./assets/images/common/about_transparent_bg.png');")
+    
+    .feedback__list
+      .feedback__item
         .feedback__text
+          p 
+          p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
         .feedback__author
-            .feedback__author-avatar
-            .feedback__author-name
-    .feedback__form
-        .subtitle связаться со мной
-        input(tupe='text')
-        input(tupe='text')
-        textarea(name="", cols="30", rows="10")
-        button.btn-send Отправить
-        button.btn-clear Очистить
+            .feedback__avatar
+              +avatar('./assets/images/avatars/DmitriyKovalchuk.jpg', "feedback__avatar-pic")
+            .feedback__author-info
+              .feedback__name Ковальчук Дмитрий
+              .feedback__post основатель Loftschool
+      .feedback__item
+        .feedback__text
+          p 
+          p Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+        .feedback__author
+            .feedback__avatar
+              +avatar('./assets/images/avatars/VladimirSabantsev.jpg', "feedback__avatar-pic")
+            .feedback__author-info
+              .feedback__name Сабанцев Владимир
+              .feedback__post преподаватель
+    
+    .form.feedback__form
+        h2.subtitle.dashTitle связаться со мной
+        .form__inputs
+          input.input(type='text' placeholder="Имя")
+          input.input(type='text' placeholder="Email")
+          textarea.textarea(name="", cols="30", rows="10"  placeholder="Ваше сообщение")
+        .form__btns
+          button.btn-send Отправить
+          button.btn-clear Очистить
 
+    +arrow("up-btn")
   
