@@ -46,7 +46,7 @@ block content
     .feedback__list
       .feedback__item
         .feedback__text
-          p 
+          .feedback__quots &#8220;
           p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
         .feedback__author
             .feedback__avatar
@@ -56,7 +56,7 @@ block content
               .feedback__post основатель Loftschool
       .feedback__item
         .feedback__text
-          p 
+          .feedback__quots &#8220;
           p Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
         .feedback__author
             .feedback__avatar
@@ -65,15 +65,15 @@ block content
               .feedback__name Сабанцев Владимир
               .feedback__post преподаватель
     
-    .form.feedback__form
-        h2.subtitle.dashTitle связаться со мной
-        .form__inputs
-          input.input(type='text' placeholder="Имя")
-          input.input(type='text' placeholder="Email")
-          textarea.textarea(name="", cols="30", rows="10"  placeholder="Ваше сообщение")
-        .form__btns
-          button.btn-send Отправить
-          button.btn-clear Очистить
+    form.form.feedback__form
+      h2.subtitle.dashTitle связаться со мной
+      .form__inputs
+        input.input(type='text' placeholder="Имя")
+        input.input(type='text' placeholder="Email")
+        textarea.textarea(placeholder="Ваше сообщение")
+      .form__btns
+        button.btn.btn-send Отправить
+        button.btn.btn-clear Очистить
 
     +arrow("up-btn")
   

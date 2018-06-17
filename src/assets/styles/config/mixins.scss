@@ -47,3 +47,7 @@
         padding-bottom: 40px;
     }
 }
+
+@mixin fontAwesome() {
+	font-family: 'fontawesome', Helvetica, sans-serif;
+}

@@ -4,7 +4,6 @@
     background-color: rgba(252, 252, 252, 0.851);
     opacity: 0.851;
     width: 380px;
-    //height: 395px;
     display: flex;
     flex-direction: column;
     padding-top: 40px;
@@ -37,11 +36,20 @@
     }
 }
 
-    .auth-block__content {
-        width: 100%;
-    }
+.auth-block__content {
+    width: 100%;
+}
 
-    .socials {
-        display: flex;
-    }
 
+.socials--index-page {
+    margin-bottom: 45px;
+
+    .socials__link-icon {
+        fill: $green_light;
+        opacity: 0.5;
+        
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

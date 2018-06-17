@@ -14,6 +14,7 @@
 
 .feedback__list {
     display: flex;
+    margin-bottom: 70px;
 }
 
 .feedback__item {
@@ -26,6 +27,14 @@
 
 .feedback__text {
     text-align: start;
+}
+
+.feedback__quots {
+    vertical-align: middle;
+    font-size: 100px;
+    line-height: 50px;
+    @include fontAwesome;
+    opacity: 0.2;
 }
 
 .feedback__author {
@@ -48,4 +57,5 @@
 
 .up-btn {
     transform: rotate(180deg);
+    margin-bottom: 210px;
 }

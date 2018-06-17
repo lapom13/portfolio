@@ -1,9 +1,9 @@
 mixin icon(iconName, iconClass)
   svg(class=`${iconClass}`)
-    use(xlink:href=`/assets/images/icons/sprite.svg#${iconName}`)
+    use(xlink:href=`./assets/images/icons/sprite.svg#${iconName}`)
 
 mixin image(imagePath, imageAlt, imageClass)
-  img(src=`/assets/images/${imagePath}`, alt=`${imageAlt}`, class=`${imageClass}`)
+  img(src=`./assets/images/${imagePath}`, alt=`${imageAlt}`, class=`${imageClass}`)
 
 mixin socials(socialsItems, modClass)
   .socials(class=`${modClass}`)
@@ -24,7 +24,6 @@ mixin menu(menuItems, modClass, indexIsActive)
           else
             li.menu__item
               a.menu__link(href=item[1])= item[0]
-
 
 mixin radioInput(text)
   label.radio
@@ -61,4 +60,8 @@ mixin arrow(modClass)
   a(href="#" class=modClass).arrow
       +icon("arrow_down")
 
-
+mixin radioButton(text, modClass)
+  label(class=modClass)
+    input(type="radio"  name="radio" checked="checked")
+    .radio-fake
+    span Оплата по карте
