@@ -1,0 +1,79 @@
+extends ../main.layout.pug
+
+block variables
+  - var title = 'Мои работы'
+
+block scripts
+  script(src='works.bundle.js')
+
+block content
+  section.hero.hero-works
+    include ../common/hero__top.pug  
+    .hero__title
+      +heroUser('hero-about__user')
+    +arrow("down-btn")
+      
+  section.my-works
+    .triangles
+        svg.triangle-left.triangle_works_left(viewBox="0 0 100 100" preserveAspectRatio="none")
+          polygon.poligon(points="0,0 0,100 100,100")
+        svg.triangle-right.triangle_works_right(viewBox="0 0 100 100" preserveAspectRatio="none")
+          polygon.poligon(points="0,0 0,100 100,100")
+    .my-works__title
+      h1.title.dashTitle мои работы
+        .transparent-caption-img(style="background-image: url('./assets/images/works/works_transparent_bg.png');")
+    .my-works__description
+        .my-works__title
+          .subtitle
+            .dashTitle Сайт школы онлайн
+            | Образования
+        .my-works__text HTML , CSS, JAVASCRIPT
+        a.btn-link
+          +icon("link", "btn-link__icon")
+          .btn-link__caption Посмотреть сайт
+    .slider.my-works__slider
+        .slider__top
+        .slider__bottom
+            .slider__bottom-left
+            .slider__bottom-right
+  
+  section.feedback
+    h1.title.title--feedback
+      .dashTitle что обо мне
+      | говорят
+      .transparent-caption-img(style="background-image: url('./assets/images/common/about_transparent_bg.png');")
+    
+    .feedback__list
+      .feedback__item
+        .feedback__text
+          .feedback__quots &#8220;
+          p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+        .feedback__author
+            .feedback__avatar
+              +avatar('./assets/images/avatars/DmitriyKovalchuk.jpg', "feedback__avatar-pic")
+            .feedback__author-info
+              .feedback__name Ковальчук Дмитрий
+              .feedback__post основатель Loftschool
+      .feedback__item
+        .feedback__text
+          .feedback__quots &#8220;
+          p Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+        .feedback__author
+            .feedback__avatar
+              +avatar('./assets/images/avatars/VladimirSabantsev.jpg', "feedback__avatar-pic")
+            .feedback__author-info
+              .feedback__name Сабанцев Владимир
+              .feedback__post преподаватель
+    
+    form.form.feedback__form
+      h2.subtitle.dashTitle связаться со мной
+      .form__inputs
+        input.input(type='text' placeholder="Имя")
+        input.input(type='text' placeholder="Email")
+        textarea.textarea(placeholder="Ваше сообщение")
+      .form__btns
+        button.btn.btn-send Отправить
+        button.btn.btn-clear Очистить
+
+    +arrow("up-btn")
+  

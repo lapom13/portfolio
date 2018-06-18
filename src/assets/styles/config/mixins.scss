@@ -1,0 +1,53 @@
+@mixin bgPicture($url) {
+    background: url($url) center center / cover no-repeat;
+}
+
+// @function rem($px) {
+//     @return $px/16px + 0rem;
+// }
+
+@mixin centerFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin tablets {
+    @media screen and (max-width: $tablets) {
+        @content;
+    }
+}
+
+@mixin phones {
+    @media screen and (max-width: $phones) {
+        @content;
+    }
+}
+
+@mixin circle ($width, $color) {
+    width: $width;
+    height: $width;
+    border-radius: $width/2;
+    background-color: $color;
+}
+
+@mixin bernier($style: $title) {
+	font-family: 'bernier', Helvetica, sans-serif;
+    font-weight: 400;
+
+	@if $style == title {
+        font-size: 63px;
+        color: $grey_dark;
+        padding: 70px 0;
+    }
+    
+    @if $style == subtitle {
+        font-size: 35px;
+        color: $grey_light;
+        padding-bottom: 40px;
+    }
+}
+
+@mixin fontAwesome() {
+	font-family: 'fontawesome', Helvetica, sans-serif;
+}

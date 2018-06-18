@@ -1,0 +1,20 @@
+.article__text-content {
+    line-height: 26px;
+    margin-bottom: 20px;
+}
+
+.article__title, .article__date {
+    margin-bottom: 30px;
+    padding: 0;
+}
+
+.article__date {
+    display: block;
+    color: $green_light;
+}
+
+.article {
+    p {
+        margin-bottom: 15px;
+    }
+}

@@ -1,0 +1,55 @@
+
+.auth-block {
+    border-radius: 5px;
+    background-color: rgba(252, 252, 252, 0.851);
+    opacity: 0.851;
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    overflow: hidden;
+
+    .menu__list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu__item {
+        flex: 1;
+        margin-right: 2px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    
+    .menu__link {
+        display: block;
+        padding: 15px 30px;
+        text-decoration: none;
+        color: #fff;
+        background-color: $green_light;
+        white-space: nowrap;
+    }
+
+    .menu__link:hover {
+        background-color: $green_dark;
+    }
+}
+
+.auth-block__content {
+    width: 100%;
+}
+
+
+.socials--index-page {
+    margin-bottom: 45px;
+
+    .socials__link-icon {
+        fill: $green_light;
+        opacity: 0.5;
+        
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

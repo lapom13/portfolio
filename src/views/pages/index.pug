@@ -1,6 +1,51 @@
 extends ../auth.layout.pug
 
 block content
-  .hello-world
-    +icon('check', 'hello-world__block')
-    .inlined-svg
+
+  .wrapper.wrapper-index
+    .auth
+      .flipper
+        .front
+          .auth-block
+            .auth-block__content
+              .auth-block__user
+                +heroUser('user--index-page')
+              nav.auth-block__socials
+                +socials(socials_array, 'socials--index-page')
+            .auth-block__menu
+              +menu(menuItems, '')
+        .back
+          .login
+            .login__container
+              .subtitle.dashTitle авторизуйтесь
+              .login__input
+                .login__icon-wrap
+                  +icon("login", 'login__icon')
+                input.login__field(type="text" placeholder="Логин")
+              .login__input
+                .login__icon-wrap
+                  +icon("password", 'login__icon')
+                input.login__field(type="text" placeholder="Пароль")
+              .checkbox
+                input(type="checkbox" checked="checked")
+                .checkbox-fake
+                span Я человек
+              .login__text Вы точно не робот?
+              .login__row
+                .radio
+                  input(type="radio" name="radio" checked="checked")
+                  .radio-fake
+                  span Да
+                .radio
+                  input(type="radio" name="radio")
+                  .radio-fake
+                  span Не уверен
+            
+            .login__row.login__btns
+              button.btn.btn-main На главную
+              button.btn.btn-exit Войти
+            
+
+  footer
+    small.catption-bottom © Олег Огородников | создано с любовью в LoftSchool | 2018
+  button.auth-btn Авторизоваться

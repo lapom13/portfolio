@@ -1,0 +1,18 @@
+.content__list {
+    width: 72%;
+    max-width: 880px;
+    padding-top: 60px;
+}
+
+.content__item {
+    padding-bottom: 70px;
+    margin-bottom: 70px;
+    border-bottom: 5px solid rgba(55, 62, 66, 0.07);
+
+    &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+}
+

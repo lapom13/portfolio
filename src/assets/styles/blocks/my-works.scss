@@ -1,0 +1,45 @@
+.my-works {
+    min-height: 100vh;
+    display: grid;
+    background-color: #faf8f0;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 750px;
+    grid-template-areas: 
+    "title title"
+    "description slider";
+
+}
+
+    .triangles {
+        fill: #faf8f0;
+    }
+    
+    .my-works__title {
+        @include centerFlex;
+        grid-area: title;
+        .transparent-caption-img {
+
+        }
+    }
+
+    .my-works__description {
+        @include centerFlex;
+        flex-direction: column;
+        text-align: center;
+        background-color: #f0efe9;
+        grid-area: description;
+    }
+
+        .my-works__text {
+            width: 420px;
+            color: $green_light;
+            border-top: 1px solid $green_light; 
+            border-bottom: 1px solid $green_light;
+            padding: 15px 0;
+            margin-bottom: 40px; 
+        }
+    
+    .my-works__slider {
+        background-color: #efebe0;
+        grid-area: slider;
+    }

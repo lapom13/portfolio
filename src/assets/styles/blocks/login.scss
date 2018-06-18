@@ -1,0 +1,70 @@
+.login {
+    @include centerFlex;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: rgba(252, 252, 252, 0.851);
+    opacity: 0.851;
+    width: 380px;
+    overflow: hidden;
+}
+
+.login__container {
+    width: 100%;
+    @include centerFlex;
+    flex-direction: column;
+    padding: 40px 20px;
+}
+
+.login__row {
+    display: flex;
+}
+
+.login__input {
+    display: block;
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+    height: 45px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.login__field {
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 20px 15px;
+}
+
+.login__icon-wrap {
+    height: 100%;
+    width: 45px;
+    background-color: #f0efe9;
+    @include centerFlex;
+}
+
+.login__icon {
+    fill: #c4cbcd;
+    height: 16px;
+    width: 16px;
+}
+
+.login__text {
+    font-weight: 700;
+}
+
+.login__btns {
+    width: 100%;
+}
+
+.btn-main, .btn-exit {
+    width: 50%;
+}
+
+.btn-exit {
+    border-right: none;
+}
+  
+.checkbox, .radio {
+    @include centerFlex;
+}
