@@ -13,25 +13,21 @@
     }
     
     .menu__item {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
         margin-bottom: 35px;
         text-align: right;
-        
-        &:first-child{
-            color: $green_light;
-        }
+        border-right: 3px solid transparent;
+        padding-right: 15px;
+        transition: .3s;
     }
     
-    .menu__item--is-active {
-        color: $green_light;
+    .menu__item--is-active, .menu__item:hover {
+        border-right-color: $green_light;
         
-        &::after {
-            content: "";
-            display: inline-block;
-            width: 3px;
-            height: 42px;
-            background-color: $green_light;
-            vertical-align: middle;
-            margin-left: 15px;
+        a {
+            color: $green_light;
         }
     }
 
