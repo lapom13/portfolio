@@ -10,10 +10,10 @@ block content
             .auth-block__content
               .auth-block__user
                 +heroUser('user--index-page')
-              nav.auth-block__socials
+              .auth-block__socials
                 +socials(socials_array, 'socials--index-page')
-            .auth-block__menu
-              +menu(menuItems, '')
+            +menu(menuItems, 'auth-block__menu')
+              
         .back
           .login
             .login__container
@@ -25,7 +25,7 @@ block content
               .login__input
                 .login__icon-wrap
                   +icon("password", 'login__icon')
-                input.login__field(type="text" placeholder="Пароль")
+                input.login__field(type="password" placeholder="Пароль")
               .checkbox
                 input(type="checkbox" checked="checked")
                 .checkbox-fake
@@ -42,8 +42,8 @@ block content
                   span Не уверен
             
             .login__row.login__btns
-              button.btn.btn-main На главную
-              button.btn.btn-exit Войти
+              button(type="button").btn.btn-main На главную
+              button(type="button").btn.btn-exit Войти
             
 
   footer

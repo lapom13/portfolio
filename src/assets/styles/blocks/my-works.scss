@@ -17,9 +17,6 @@
     .my-works__title {
         @include centerFlex;
         grid-area: title;
-        .transparent-caption-img {
-
-        }
     }
 
     .my-works__description {
