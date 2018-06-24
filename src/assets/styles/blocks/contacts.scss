@@ -9,6 +9,13 @@
     flex-direction: column;
     align-items: center;
     color: $grey_light;
+    @include phones {
+        border-radius: 0px;
+        opacity: 1;
+        padding: 30px 10px;
+        align-items: flex-start;
+
+    }
 }
   
 .contacts__item {
@@ -16,26 +23,37 @@
     display: flex;
     flex-direction: row;
     margin-bottom: 35px;
+    font-size: 16px;
     &:last-child {
         margin-bottom: 0;
     }
-}
-    .contacts__link {
-        display: flex;
-        text-decoration: none;
-        color: $grey_light;
-    }
     
-        .contacts__name {
-            font-style: normal;
-        }
-        
-        .contacts__icon{
-            margin-right: 10px;
-        }
+    @include phones {
+        margin-bottom: 20px;
+    }
+}
+.contacts__link {
+    display: flex;
+    text-decoration: none;
+    color: $grey_light;
+}
+
+.contacts__name {
+    font-style: normal;
+}
+
+.contacts__icon{
+    margin-right: 10px;
+}
             
-            .contacts__icon-pic {
-                width: 25px;
-                height: 25px;
-                fill: $green_light;
-            }
+.contacts__icon-pic {
+    width: 25px;
+    height: 25px;
+    fill: $green_light;
+}
+
+.contacts__title {
+    @include phones {
+        font-size: 35px; 
+    }
+}

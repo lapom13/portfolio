@@ -32,11 +32,20 @@
     position: relative;
     display: inline-block; 
     @include bernier(title);
+    
+    @include phones {
+        font-size: 35px;
+        padding: 0;
+    }
 }
 
 .subtitle {
     position: relative;
-    @include bernier(subtitle); 
+    @include bernier(subtitle);
+    
+    @include phones {
+        font-size: 21px;
+    } 
 }
 
 .transparent-caption-img {

@@ -1,33 +1,68 @@
 .footer {
     background-color: $footer_color;
     text-decoration: none;
-    height: 145px;
     opacity: 0.85;
+    height: 145px;
     margin-top: -145px;
-}
+    @include tablets {
+        font-size: 16px;
+        height: 230px;
+        margin-top: -230px;
+    }
 
-    .footer__row {
-        height: 50%;
-        display: flex;
-        align-items: center;
-        padding: 0 25px;
-        justify-content: space-between;
-        border-bottom-color: #fff;
-        border-bottom: 1px solid #646a6d;
-        
-        &:last-child {
-            border-bottom: none;
+    @include phones {
+        font-size: 13px;
+        height: 270px;
+        margin-top: -270px;
+
+        small {
+            font-weight: 300;
         }
     }
-        .footer__col {
-            max-width: 500px;
-        }
+}
 
-            .footer__text {
-                color: #fff;
-                font-weight: 300;
-                opacity: 0.5;
-            }
+.footer__row {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    justify-content: space-between;
+    border-bottom-color: #fff;
+    border-bottom: 1px solid #646a6d;
+
+    @include tablets {
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 0 35px;
+    }
+
+    @include phones {
+        padding: 0 15px;
+    }
+    
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.footer__col {
+    max-width: 500px;
+    
+    @include tablets {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    @include phones {
+        font-size: 13px;
+    }
+}
+
+.footer__text {
+    color: #fff;
+    font-weight: 300;
+    opacity: 0.5;
+}
 
 .footer__menu {
     font-weight: 500;
@@ -42,6 +77,11 @@
         
         &:last-child {
             margin-right: 0;
+        }
+
+        
+        @include phones {
+            margin-right: 10px;
         }
     }
 
@@ -63,7 +103,6 @@
     .socials__link-icon {
         width: 36px;
         height: 36px;
-        
         border: 1px solid rgba(255, 255, 255, 0.5);
         border-radius: 50%;
         fill: $footer_color;
@@ -74,6 +113,5 @@
             fill: white;
             background-color: transparent;         
         }
-        
     }
 }

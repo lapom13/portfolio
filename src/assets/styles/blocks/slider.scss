@@ -1,0 +1,46 @@
+.slider {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 220px;
+    grid-template-areas: 
+    "top    top"
+    "left   right";
+}
+
+.slider__top {
+    grid-area: top;
+}
+
+.slider__left, .slider__right {
+    @include centerFlex;
+    position: relative;
+    &::after {
+        position: absolute;
+        display: block;
+        content:"";
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(128,128,128,0.6);
+    }
+}
+
+.slider__left {
+    grid-area: left;
+    background-color: rgb(241, 237, 225);
+}
+
+.slider__right {
+    grid-area: right;
+    background-color: rgb(227, 222, 208);
+    &::after {
+        background-color: rgba(128,128,128,0.7);  
+    }
+}
+
+.slider-up, .slider-down {
+    z-index: 20;
+    opacity: 1;
+    margin: 0;
+}

@@ -31,10 +31,17 @@ block content
           +icon("link", "btn-link__icon")
           .btn-link__caption Посмотреть сайт
     .slider.my-works__slider
-        .slider__top
-        .slider__bottom
-            .slider__bottom-left
-            .slider__bottom-right
+        .slider__top(
+            style="background: url('./assets/images/works/work_1.png') center center / cover no-repeat;"
+          )
+        .slider__left(
+            style="background: url('./assets/images/works/work_2.jpg') center center / cover no-repeat;"
+          )
+          +arrow("slider-down")
+        .slider__right(
+            style="background: url('./assets/images/works/work_3.jpg') center center / cover no-repeat;"
+          )
+          +arrow("up-btn slider-up")
   
   section.feedback
     h1.title.title--feedback

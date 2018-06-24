@@ -19,7 +19,9 @@
     background-color: #fff;
   }
 
-
+  @include phones {
+    right: 50%;
+  }
 }
   
 

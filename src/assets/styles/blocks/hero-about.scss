@@ -14,6 +14,9 @@
             transform: translate(25%, 25%);
             opacity: 0.06;
             background: url('./assets/images/about/portfolio_title_tranparent.png') center center / contain no-repeat;
+            @include tablets {
+                display: none;
+            }
         }
 }
 
