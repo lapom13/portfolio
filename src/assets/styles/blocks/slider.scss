@@ -1,20 +1,65 @@
 .slider {
+    min-height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 220px;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 2fr 220px;
     grid-template-areas: 
-    "top    top"
-    "left   right";
+    "desc   top   top"
+    "desc   left  right";
+
+    @include tablets {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 530px 1fr 220px;
+        grid-template-areas:
+        'top    top' 
+        'desc   desc' 
+        'left   right';
+    }
+}
+
+.slider__description {
+    @include centerFlex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #f0efe9;
+    grid-area: desc;
+
+    @include tablets {
+        padding: 50px 0 60px 0;
+    }
+}
+
+.slider__text {
+    width: 420px;
+    color: $green_light;
+    border-top: 1px solid $green_light; 
+    border-bottom: 1px solid $green_light;
+    padding: 15px 0;
+    margin-bottom: 40px; 
+
+    @include tablets {
+        font-size: 16px;
+    }
+    
+    @include phones {
+        font-size: 14px;
+    }
 }
 
 .slider__top {
     grid-area: top;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 75% 58%;
 }
 
 .slider__left, .slider__right {
     @include centerFlex;
     position: relative;
-    &::after {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+        &::after {
         position: absolute;
         display: block;
         content:"";

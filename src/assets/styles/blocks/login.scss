@@ -51,6 +51,7 @@
 
 .login__text {
     font-weight: 700;
+    margin-bottom: 15px;
 }
 
 .login__btns {
@@ -67,4 +68,23 @@
   
 .checkbox, .radio {
     @include centerFlex;
+}
+
+.login__checkbox {
+    margin-bottom: 20px;
+    .checkbox-fake {
+        margin-right: 10px;
+    }
+}
+
+.login__radio {
+    margin-right: 40px;
+    &:last-child {
+        margin-right: 0;
+    }
+
+    .radio-fake {
+        border-color: rgb(204, 204, 204);
+        margin-right: 10px;
+    }
 }

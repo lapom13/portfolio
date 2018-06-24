@@ -22,26 +22,26 @@ block content
     .my-works__title
       h1.title.dashTitle мои работы
         .transparent-caption-img(style="background-image: url('./assets/images/works/works_transparent_bg.png');")
-    .my-works__description
+    .slider.my-works__slider
+      .slider__description
         h2.subtitle
           .dashTitle Сайт школы онлайн
           | Образования
-        .my-works__text HTML , CSS, JAVASCRIPT
+        .slider__text HTML , CSS, JAVASCRIPT
         a.btn-link
           +icon("link", "btn-link__icon")
           .btn-link__caption Посмотреть сайт
-    .slider.my-works__slider
-        .slider__top(
-            style="background: url('./assets/images/works/work_1.png') center center / cover no-repeat;"
-          )
-        .slider__left(
-            style="background: url('./assets/images/works/work_2.jpg') center center / cover no-repeat;"
-          )
-          +arrow("slider-down")
-        .slider__right(
-            style="background: url('./assets/images/works/work_3.jpg') center center / cover no-repeat;"
-          )
-          +arrow("up-btn slider-up")
+      .slider__top(
+          style="background-image: url('./assets/images/works/work_1.png');"
+        )
+      .slider__left(
+          style="background-image: url('./assets/images/works/work_2.jpg');"
+        )
+        +arrow("slider-down")
+      .slider__right(
+          style="background-image: url('./assets/images/works/work_3.jpg');"
+        )
+        +arrow("up-btn slider-up")
   
   section.feedback
     h1.title.title--feedback
@@ -81,5 +81,5 @@ block content
         button.btn.btn-send Отправить
         button.btn.btn-clear Очистить
 
-    +arrow("up-btn")
+    +arrow("up-btn feedback__btn")
   

@@ -1,15 +1,22 @@
-.form__checkbox-fake {
+.checkbox-fake {
+    @include centerFlex;
     width: 16px;
     height: 16px;
-    margin-right: rem(8px);
     background-color: #fff;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 2px;
+
+    .checkbox-icon {
+        width: 12px;
+        height: 9px;
+        fill:#fff;
+    }
 }
 
-.form__checkbox {
+.checkbox {
     display: flex;
     align-items: center;
     position: relative;
-    margin-bottom: rem(18px);
 
     label {
         display: flex;
@@ -21,9 +28,12 @@
         top: 0;
         left: -10000px;
 
-        &:checked + .form__checkbox-fake{
-            background: url("../img/common/checkbox.png") center center / contain no-repeat;
-            background-color: #fff;
+        &:checked + .checkbox-fake{
+            background-color: $green_light;
+            border: none;
         }
     }
 }
+
+
+  

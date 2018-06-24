@@ -13,7 +13,6 @@ mixin socials(socialsItems, modClass)
           a(href=`${item[1]}` target="_blank").socials__link
             +icon(item[0], 'socials__link-icon')
 
-
 mixin menu(menuItems, modClass, indexIsActive)
     .menu(class=modClass)
       ul.menu__list
@@ -25,17 +24,24 @@ mixin menu(menuItems, modClass, indexIsActive)
             li.menu__item
               a.menu__link(href=item[1])= item[0]
 
-mixin radioInput(text)
-  label.radio
-    input(type="radio" name="radio")
+mixin radio(text, name, value, checked, modClass)
+  label.radio(class=modClass)
+    if checked == 'checked'
+      input(type="radio" name=name value=value  checked='checked')
+    else
+      input(type="radio" name=name value=value)
     div.radio-fake
     span= text
   
 
-mixin checkboxInput(text)
-  label.checkbox
-    input(type="checkbox" checked='checked')
+mixin checkbox(text, name, value, checked, modClass)
+  label.checkbox(class=modClass)
+    if checked == 'checked'
+      input(type="checkbox" name=name value=value  checked='checked')
+    else
+      input(type="checkbox" name=name value=value)
     div.checkbox-fake
+      +icon('check', 'checkbox-icon')
     span= text
 
 mixin heroUser(modClass)
@@ -54,14 +60,11 @@ mixin triangles(side, color)
     "fill:#0f2db3;")
 
 mixin avatar(url, modClass)
-  .avatar(style=`background: url(${url});` class=`${modClass}`)
+  .avatar(style=`background-image: url(${url});` class=`${modClass}`)
 
 mixin arrow(modClass)
   a(href="#" class=modClass).arrow
       +icon("arrow_down")
 
-mixin radioButton(text, modClass)
-  label(class=modClass)
-    input(type="radio"  name="radio" checked="checked")
-    .radio-fake
-    span Оплата по карте
+
+

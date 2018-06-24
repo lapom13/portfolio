@@ -12,4 +12,14 @@
     fill: #fff;
     margin-right: 10px;
 }
+
+.btn-link__caption {
+    @include tablets {
+        font-size: 16px;
+    }
+    
+    @include phones {
+        font-size: 14px;
+    }
+}
   

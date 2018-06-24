@@ -3,7 +3,6 @@
     border-radius: 5px;
     background-color: rgba(252, 252, 252, 0.851);
     opacity: 0.851;
-    width: 380px;
     display: flex;
     flex-direction: column;
     padding-top: 40px;
@@ -12,6 +11,10 @@
     .menu__list {
         display: flex;
         justify-content: space-between;
+        
+        @include phones {
+            font-size: 14px;
+        }
     }
 
     .menu__item {
@@ -23,12 +26,17 @@
     }
     
     .menu__link {
+        text-align: center;
         display: block;
         padding: 15px 30px;
         text-decoration: none;
         color: #fff;
         background-color: $green_light;
         white-space: nowrap;
+        
+        @include phones {
+            padding: 15px 20px;
+        }
     }
 
     .menu__link:hover {
@@ -40,9 +48,12 @@
     width: 100%;
 }
 
-
 .socials--index-page {
     margin-bottom: 45px;
+
+    @include phones {
+        margin-bottom: 40px;
+    }
 
     .socials__link-icon {
         fill: $green_light;
@@ -50,6 +61,20 @@
         
         &:hover {
             opacity: 1;
+        }
+    }
+}
+
+.user--index-page {
+    margin-bottom: 35px;
+    
+    @include phones {
+        .user__name {
+            font-size: 21px;
+        }
+
+        .user__info {
+            font-size: 14px;
         }
     }
 }

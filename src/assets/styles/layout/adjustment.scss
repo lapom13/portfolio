@@ -33,6 +33,10 @@
     display: inline-block; 
     @include bernier(title);
     
+    @include tablets {
+        font-size: 49px;
+    }
+    
     @include phones {
         font-size: 35px;
         padding: 0;
@@ -42,6 +46,11 @@
 .subtitle {
     position: relative;
     @include bernier(subtitle);
+    
+    
+    @include tablets {
+        font-size: 30px;
+    }
     
     @include phones {
         font-size: 21px;

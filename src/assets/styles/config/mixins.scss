@@ -24,10 +24,10 @@
     }
 }
 
-@mixin circle ($width, $color) {
+@mixin circle($width, $color) {
     width: $width;
     height: $width;
-    border-radius: $width/2;
+    border-radius: calc($width/2);
     background-color: $color;
 }
 
