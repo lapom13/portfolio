@@ -1,3 +1,27 @@
 script(type="text/x-template")#skills-list
     ul.skills__list-rows
-        li.skills__item-rows Список
+        li.skills__item-rows(v-for = "skills in skills")
+            skills-row(
+                :skills = "skills"
+            )
+
+
+script(type="text/x-template")#skills-row
+    .skills-row
+        .skills-row__title {{ skills.skillsGroup }}
+            ul.skills-row__list
+                li.skills-row__item(v-for = "(skillPersents, skillName) in skills.skills")
+                    skill(
+                        :skillPercents = "skillPersents"
+                        :skillName = "skillName"
+                    )
+                    
+                
+                
+
+script(type="text/x-template")#skill
+    .skill
+        svg(viewBox="0 0 100 100" preserveAspectRatio="none").skill__figure
+            circle(cx="50" cy="50" r="40").skill__circle.skill__circle_under
+            circle(cx="50" cy="50" r="40" ref="color-circle").skill__circle.skill__circle_above
+        .skill__title {{ skillName }}

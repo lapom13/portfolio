@@ -45,26 +45,6 @@ block content
       .about__right-content
         #skills-container
         
-        
-        .skills
-          -
-            var skills = [
-              ['Frontend', [['HTML5', 80], ['CSS3', 80], ['JavaScript & jQuery', 80]]],
-              ['Backend', [['PHP', 40], ['mySQL', 60], ['NodeJS & npm', 30], ['Mongo db', 65]]],
-              ['WorkFlow', [['Git', 80], ['gulp', 70], ['Bower', 70]]]
-            ]
-          ul.skills__list-rows
-            each skillsrow in skills
-              li.skills__item-rows
-                .skills-row__title #{skillsrow[0]}
-                ul.skills-row__list
-                  each skill in skillsrow[1]
-                    li.skills-row__item
-                      figure.skill(data-percents="70")
-                        svg(viewBox="0 0 100 100" preserveAspectRatio="none").skill__figure
-                          circle(cx="50" cy="50" r="40").skill__circle.skill__circle_under
-                          circle(cx="50" cy="50" r="40").skill__circle.skill__circle_above
-                        .skill__title #{skill[0]}
 
   section.map.map__data
     .contacts

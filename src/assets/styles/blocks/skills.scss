@@ -67,7 +67,7 @@
 
 .skill__circle {
     fill: transparent;
-    stroke: $green_light;
+    //stroke: $green_light;
     stroke-width: 20px; 
 }
 
@@ -75,6 +75,10 @@
     stroke: $green_light;
     stroke-dasharray: 251;
     stroke-dashoffset: 251;
+}
+
+.skill__circle_under {
+    stroke: rgb(185, 180, 167);
 }
 
 
