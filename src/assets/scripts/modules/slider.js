@@ -34,6 +34,7 @@ const buttons = {
                     worksArray.shift();
                     break;
             }
+            return worksArray[this.currentIndex]
         }
     },
     props: {

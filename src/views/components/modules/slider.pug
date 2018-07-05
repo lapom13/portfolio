@@ -30,7 +30,7 @@ script(type="text/x-template")#slider-buttons
     .slider__buttons  
         .slider__button.slider__button--prev(@click="slide('prev')") 
             .slider__button-img-wrap   
-                img(src="./assets/images/works/work_4.jpg", alt="work_2").slider__button-pic
+                img(:src="getReqImage('prev').photo", alt="work_2").slider__button-pic
         .slider__button.slider__button--next(@click="slide('next')") 
             .slider__button-img-wrap   
-                img(src="./assets/images/works/work_2.jpg", alt="work_3").slider__button-pic
+                img(:src="getReqImage('next').photo", alt="work_3").slider__button-pic
