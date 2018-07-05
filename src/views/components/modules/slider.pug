@@ -8,6 +8,8 @@ script(type="text/x-template")#slider
         )
         buttons(
             :works = "works"
+            :currentIndex = "currentIndex"
+            @slide = "handleSlide"
         )
 
 script(type="text/x-template")#slider-info
@@ -17,7 +19,7 @@ script(type="text/x-template")#slider-info
                 .dashTitle {{ work.title }}
         .slider__info-skills {{ work.skills }}
         .slider__info-button
-            a(href="work.link" target="_blank").btn-link
+            a(:href="work.link" target="_blank").btn-link
                 .btn-link__caption Посмотреть сайт
 
 script(type="text/x-template")#slider-display
@@ -26,9 +28,9 @@ script(type="text/x-template")#slider-display
 
 script(type="text/x-template")#slider-buttons
     .slider__buttons  
-        .slider__button(@click="slide") 
+        .slider__button.slider__button--prev(@click="slide('prev')") 
             .slider__button-img-wrap   
-                img(src="./assets/images/works/work_2.jpg", alt="work_2").slider__button-pic
-        .slider__button.slider__button--next 
+                img(src="./assets/images/works/work_4.jpg", alt="work_2").slider__button-pic
+        .slider__button.slider__button--next(@click="slide('next')") 
             .slider__button-img-wrap   
-                img(src="./assets/images/works/work_3.jpg", alt="work_3").slider__button-pic
+                img(src="./assets/images/works/work_2.jpg", alt="work_3").slider__button-pic
