@@ -1,0 +1,34 @@
+.fullscreen-menu__wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $green_light;
+    opacity: .87;
+    @include centerFlex;
+}
+
+.fullscreen-menu {
+    //height: 100%;
+    //width: 100%;
+
+    .menu__list {
+        @include centerFlex;
+        flex-direction: column;
+    }
+    .menu__link {
+        color: #fff;
+        margin-bottom: 80px;
+        padding: 0;
+
+        &::before, &::after {
+            opacity: 0;
+            background-color: #fff;
+        }
+        
+        &:hover::before, &:hover::after {
+            opacity: 1;
+        }
+    }
+}
