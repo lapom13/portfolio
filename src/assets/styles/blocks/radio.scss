@@ -1,0 +1,36 @@
+.radio {
+    @include centerFlex;
+    position: relative;
+
+    label {
+        display: flex;
+        align-items: center;
+    }
+
+    input {
+        position: absolute;
+        top: 0;
+        left: -10000px;
+
+        &:checked + .radio-fake::after{
+            width: $circle_internal;
+            height: $circle_internal;
+        }
+    }
+}
+
+.radio-fake {
+    @include centerFlex;
+    @include circle($circle_external, #fff);
+    border: 1px solid black;
+}
+
+.radio-fake::after {
+    @include centerFlex;
+    content: "";
+    display: block;
+    @include circle($circle_internal, $green_light);
+    transition: 0.25s;
+    height: 0;
+    width: 0;
+}

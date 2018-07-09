@@ -1,0 +1,29 @@
+@mixin tv {
+    @media screen and (min-width: $tv) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (max-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin tablets {
+    @media screen and (max-width: $tablets) {
+        @content;
+    }
+}
+
+@mixin phones {
+    @media screen and (max-width: $phones) {
+        @content;
+    }
+}
+
+@mixin small-phones {
+    @media screen and (max-width: $small_phones) {
+        @content;
+    }
+}

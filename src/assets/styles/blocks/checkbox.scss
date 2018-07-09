@@ -1,0 +1,39 @@
+.checkbox-fake {
+    @include centerFlex;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 2px;
+
+    .checkbox-icon {
+        width: 12px;
+        height: 9px;
+        fill:#fff;
+    }
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    label {
+        display: flex;
+        align-items: center;
+    }
+
+    input {
+        position: absolute;
+        top: 0;
+        left: -10000px;
+
+        &:checked + .checkbox-fake{
+            background-color: $green_light;
+            border: none;
+        }
+    }
+}
+
+
+  

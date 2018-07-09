@@ -1,4 +1,6 @@
 include ./common/_mixins
+include ./common/_vars
+
 block variables
 
 doctype html
@@ -16,6 +18,9 @@ html(lang="ru")
         block content
 
       include ./common/footer.pug
+
+    include ./common/fullscreen-menu.pug
+    include ./components/entry.pug
 
     script(src='bootloader.bundle.js')
     script(src='vendor.bundle.js')

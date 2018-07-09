@@ -1,0 +1,43 @@
+.content__list {
+    max-width: 72%;
+    max-width: 880px;
+    padding-top: 60px;
+    
+    @include desktop {
+        max-width: 680px;
+    }
+
+    @include tablets {
+        max-width: 720px;
+        margin: 0 24px;
+        margin-bottom: 45px;
+    }
+    
+    @include phones {
+        margin: 0 10px;
+        margin-bottom: 70px;
+    }
+}
+
+.content__item {
+    padding-bottom: 70px;
+    margin-bottom: 70px;
+    border-bottom: 5px solid rgba(55, 62, 66, 0.07);
+
+    @include tablets {
+        padding-bottom: 50px;
+        margin-bottom: 50px;
+    }
+    
+    @include phones {
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+    }
+
+    &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+}
+

@@ -1,0 +1,21 @@
+.my-works {
+    min-height: 100vh;
+    background-color: #faf8f0;
+}
+
+.triangles {
+    fill: #faf8f0;
+}
+
+.my-works__title {
+    @include centerFlex;
+ 
+    @include phones {
+        padding-top: 10px;
+        margin-bottom: 20px;
+    }
+}
+    
+.my-works__slider {
+    background-color: #efebe0;
+}

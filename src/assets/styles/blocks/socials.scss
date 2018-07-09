@@ -1,0 +1,29 @@
+.socials {
+    height: 40px;
+}
+
+    .socials__list {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .socials__item {
+        display: flex;
+        align-items: center;
+        margin-right: 28px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+        .socials__link-icon {
+            width: 30px;
+            height: 20px;
+            opacity: 0.5;
+            fill: white;
+
+            &:hover {
+                opacity: 1;
+            }
+        }

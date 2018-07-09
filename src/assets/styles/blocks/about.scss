@@ -1,0 +1,103 @@
+.about {
+    display: flex;
+
+    @include tablets {
+        flex-direction: column;
+    }
+}
+
+.about__col {
+    width: 50%;
+
+    @include tablets {
+        width: 100%;
+    }
+
+}
+
+.about__left {
+ background-color: #efeee9;
+ display: flex;
+ padding: 20px;
+    
+    @include desktop {
+        flex-direction: column;
+        padding: 0 80px 40px 80px;
+    }
+    @include tablets {
+        padding: 0 148px 45px 148px;
+    }
+    @include phones {
+        padding: 0px;
+    }
+}
+
+.about__right {
+    background-color: #eeebdf;
+    padding: 20px;
+    @include tablets {
+        padding: 20px 148px;
+    }
+    
+    @include phones {
+        padding: 30px 10px 0 10px;
+    }
+}
+
+.about__right-text {
+    margin-bottom: 60px;
+}
+
+.about__left-title, .user-description {
+    width: 50%;
+
+    @include desktop {
+        width: 100%;
+
+    }
+}
+
+.about__left-title, .about__right-title {
+    text-align: center;
+}
+
+.about__left-title {
+    @include phones {
+        height: 90px;
+        @include centerFlex;
+    }
+}
+
+.about__right-title {
+    .subtitle {
+        padding: 0;
+    }
+    margin-bottom: 30px;
+}
+
+.user-description__text {
+    line-height: 24px;
+
+    p {
+        margin-bottom: 10px;
+    }
+}
+
+
+.triangle_about_left {
+    fill: #efeee9;
+}
+
+.triangle_about_right {
+    fill: #eeebdf;
+    @include tablets {
+        fill: #efeee9;
+    }
+}
+
+.triangles {
+    @include phones {
+        height: 30px; 
+    }
+}
+

@@ -1,0 +1,40 @@
+.wrapper-index {
+    background: url('./assets/images/welcome/bg_welcome.jpg') center center / cover no-repeat;
+    @include centerFlex;
+    padding: 0 10px;
+}
+
+.user-index {
+    color: $grey_dark;
+}
+
+.catption-bottom {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 40px;
+    font-weight: 300;
+    font-size: 16px;
+
+    @include phones {
+        padding-bottom: 10px;
+    }
+}
+
+.user--index-page {
+    margin-bottom: 35px;
+    
+    @include phones {
+        .user__name {
+            font-size: 21px;
+        }
+
+        .user__info {
+            font-size: 14px;
+        }
+    }
+}

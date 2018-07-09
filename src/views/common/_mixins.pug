@@ -1,6 +1,70 @@
 mixin icon(iconName, iconClass)
   svg(class=`${iconClass}`)
-    use(xlink:href=`/assets/images/icons/sprite.svg#${iconName}`)
+    use(xlink:href=`./assets/images/icons/sprite.svg#${iconName}`)
 
 mixin image(imagePath, imageAlt, imageClass)
-  img(src=`/assets/images/${imagePath}`, alt=`${imageAlt}`, class=`${imageClass}`)
+  img(src=`./assets/images/${imagePath}`, alt=`${imageAlt}`, class=`${imageClass}`)
+
+mixin socials(socialsItems, modClass)
+  .socials(class=`${modClass}`)
+    ul.socials__list
+      each item in socialsItems
+        li.socials__item
+          a(href=`${item[1]}` target="_blank").socials__link
+            +icon(item[0], 'socials__link-icon')
+
+mixin menu(menuItems, modClass, indexIsActive)
+    .menu(class=modClass)
+      ul.menu__list
+        each item, index in menuItems
+          if index == indexIsActive
+            li.menu__item.menu__item--is-active
+              a.menu__link(href=item[1])= item[0]
+          else
+            li.menu__item
+              a.menu__link(href=item[1])= item[0]
+
+mixin radio(text, name, value, checked, modClass)
+  label.radio(class=modClass)
+    if checked == 'checked'
+      input(type="radio" name=name value=value  checked='checked')
+    else
+      input(type="radio" name=name value=value)
+    div.radio-fake
+    span= text
+  
+
+mixin checkbox(text, name, value, checked, modClass)
+  label.checkbox(class=modClass)
+    if checked == 'checked'
+      input(type="checkbox" name=name value=value  checked='checked')
+    else
+      input(type="checkbox" name=name value=value)
+    div.checkbox-fake
+      +icon('check', 'checkbox-icon')
+    span= text
+
+mixin heroUser(modClass)
+  .user(class=modClass)
+    .user__img.avatar
+      .user__img-pic
+    .user__description
+      .user__name Олег Огородников
+      .user__info Личный сайт веб разработчика
+
+mixin triangles(side, color)
+  svg(style="display: block" height="200" width="100%" class = "triangles")
+    polygon.triangles_left( points="0,0 0,199 250,199" style=	
+    "fill:#408528;")
+    polygon.triangles_right(points="500,0 500,199 250,199" style=	
+    "fill:#0f2db3;")
+
+mixin avatar(url, modClass)
+  .avatar(style=`background-image: url(${url});` class=`${modClass}`)
+
+mixin arrow(modClass)
+  a(href="#" class=modClass).arrow
+      +icon("arrow_down")
+
+
+

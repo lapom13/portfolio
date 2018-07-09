@@ -1,0 +1,6 @@
+.fullscreen-menu__wrap
+    .menu(class='fullscreen-menu')
+        ul.menu__list
+            each item, index in menuItems_fullScreenMenu
+                li.menu__item
+                    a.menu__link.title.dashTitle(href=item[1])= item[0]

@@ -1,0 +1,47 @@
+.form {
+    position: relative;
+    max-width: 380px;
+    border-radius: 5px;
+    margin-bottom: 70px;
+    overflow: hidden;
+    background: hsla(0,0%,100%,.3);
+    
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        filter: blur(20px);
+    }
+}
+
+.form__inputs {
+    padding: 0 20px;
+}
+
+.input, .textarea {
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 100%;
+    border: none;
+    padding: 20px 15px;
+}
+
+.textarea {
+    height: 140px;
+}
+
+.btn-send, .btn-clear {
+    width: 50%;
+}
+
+.btn-clear {
+    border-right: none;
+}
+
+
+
+  

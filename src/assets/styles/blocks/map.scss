@@ -1,0 +1,11 @@
+.map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('./assets/images/about/map.jpg') center center / cover no-repeat;
+    height: 1076px;
+    
+    @include phones {
+        align-items: flex-start;
+    }
+}
