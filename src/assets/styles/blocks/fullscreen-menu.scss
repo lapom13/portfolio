@@ -7,28 +7,36 @@
     background-color: $green_light;
     opacity: .87;
     @include centerFlex;
+    display: none;
 }
 
 .fullscreen-menu {
-    //height: 100%;
-    //width: 100%;
-
     .menu__list {
         @include centerFlex;
         flex-direction: column;
     }
+
+    .menu__item {
+        &:last-child .menu__link {
+            margin-bottom: 0;
+        }
+    }
+
+
     .menu__link {
         color: #fff;
         margin-bottom: 80px;
         padding: 0;
-
+        
         &::before, &::after {
             opacity: 0;
             background-color: #fff;
-        }
+        };
         
         &:hover::before, &:hover::after {
             opacity: 1;
-        }
+        };
+
+        
     }
 }
